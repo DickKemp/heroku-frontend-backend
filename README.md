@@ -1,17 +1,17 @@
-Example helloworld flask app hosted in heroku that serves up static content and hosts an api
+Example helloworld flask app hosted in heroku that serves up static content as well as an api
 
 ### Structure of code:
 
 | Foler | Description |
 | :--------- | :------------- |
-| ./backend | Descriptoin |
+| ./backend | holds all the backend APIs
 | ./backend/app.py | creates the app, defines the APIs
-| ./backend/appfactory.py | set the static folder
-| ./frontend | 
-| ./frontend/build |  
+| ./backend/appfactory.py | set the static folder when creating the flask app
+| ./frontend | holds the front-end code
+| ./frontend/build |  the result of a build goes into here
 | ./frontend/build/static | 
-| ./frontend/build/static/index.html | static content
-| ./Procfile | cd to backend, then starts gunicorn
+| ./frontend/build/static/index.html | sample static content
+| ./Procfile | first cd to backend, then starts gunicorn
 | ./requirements.txt | needs to be in root folder
 
 
@@ -24,20 +24,20 @@ $ heroku create
 $ git push heroku main
 ```
 
-## Tests
+## Tests after deploying
 
-after deploying, this:
+this URL:
 
-    https://mysterious-sea-45373.herokuapp.com/index.html
+>    https://mysterious-sea-45373.herokuapp.com/index.html
 
 will render the frontend/build/static/index.html file, returning
 
 **hello world**
 
-this:
+this URL:
 
-    https://mysterious-sea-45373.herokuapp.com/api/data
+>    https://mysterious-sea-45373.herokuapp.com/api/data
 
-will render the route /api/data defined in backend/app.py, returning 
+will render the route "/api/data" defined in backend/app.py, returning 
 
-*{ "rul": "/api/data", "content": "here is some data"}*
+*{ "url": "/api/data", "content": "here is some data"}*
