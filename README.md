@@ -30,10 +30,14 @@ after deploying, this:
 
     https://mysterious-sea-45373.herokuapp.com/index.html
 
-will render the frontend/build/static/index.html file
+will render the frontend/build/static/index.html file, returning
 
-And this:
+**hello world**
+
+this:
 
     https://mysterious-sea-45373.herokuapp.com/api/data
 
-will render the route /api/data defined in backend/app.py
+will render the route /api/data defined in backend/app.py, returning 
+
+*{ "rul": "/api/data", "content": "here is some data"}*
